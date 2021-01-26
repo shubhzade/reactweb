@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/reactweb/static/css/main.38c99122.chunk.css",
+    "main.js": "/reactweb/static/js/main.7a0d1722.chunk.js",
+    "main.js.map": "/reactweb/static/js/main.7a0d1722.chunk.js.map",
+    "runtime-main.js": "/reactweb/static/js/runtime-main.6c441bbe.js",
+    "runtime-main.js.map": "/reactweb/static/js/runtime-main.6c441bbe.js.map",
+    "static/css/2.78afd4a5.chunk.css": "/reactweb/static/css/2.78afd4a5.chunk.css",
+    "static/js/2.3b3cff20.chunk.js": "/reactweb/static/js/2.3b3cff20.chunk.js",
+    "static/js/2.3b3cff20.chunk.js.map": "/reactweb/static/js/2.3b3cff20.chunk.js.map",
+    "index.html": "/reactweb/index.html",
+    "static/css/2.78afd4a5.chunk.css.map": "/reactweb/static/css/2.78afd4a5.chunk.css.map",
+    "static/css/main.38c99122.chunk.css.map": "/reactweb/static/css/main.38c99122.chunk.css.map",
+    "static/js/2.3b3cff20.chunk.js.LICENSE.txt": "/reactweb/static/js/2.3b3cff20.chunk.js.LICENSE.txt",
+    "static/media/logo.83dd5ecd.jpg": "/reactweb/static/media/logo.83dd5ecd.jpg",
+    "static/media/marsh.00b314b9.jpg": "/reactweb/static/media/marsh.00b314b9.jpg",
+    "static/media/one.2387d74d.jpg": "/reactweb/static/media/one.2387d74d.jpg",
+    "static/media/shubh.8a4a5bb6.jpg": "/reactweb/static/media/shubh.8a4a5bb6.jpg",
+    "static/media/tomato.14dca89a.jpg": "/reactweb/static/media/tomato.14dca89a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6c441bbe.js",
+    "static/css/2.78afd4a5.chunk.css",
+    "static/js/2.3b3cff20.chunk.js",
+    "static/css/main.38c99122.chunk.css",
+    "static/js/main.7a0d1722.chunk.js"
+  ]
+}
