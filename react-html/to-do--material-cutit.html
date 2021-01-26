@@ -1,0 +1,219 @@
+<!-- <!-- import React, { useState } from "react"
+import Button from '@material-ui/core/Button';
+import AddIcon from '@material-ui/icons/Add';
+import Listcopy from "./Listcopy";
+
+
+
+const TodoList = () => {
+
+    const [item, setitem] = useState("");
+    const [newitem, setnewitem] = useState([]);
+
+    const itemevent = (event) => {
+        setitem(event.target.value)
+    }
+
+    const listclick = () => {
+        setnewitem((oldarray) => {
+            return [...oldarray, item];
+        });
+        setitem(" ");
+
+    }
+
+    return (<>
+
+        <div className="main_div">
+
+            <div className="center_div">
+                <br />
+                <h1>To do List</h1>
+                <br />
+                <div className="btn">
+
+                    <input type="text" placeholder="Add an itemm" onChange={itemevent} value={item}/>
+                    <Button className="shubhb" onClick={listclick}><AddIcon /></Button>
+                </div>
+                <hr />
+                <ol>
+                    {/* <li>{item}</li> */}
+                    {newitem.map((val,index) => {
+                        return <Listcopy key={index} id={index} text={val}/>
+                    })}
+                </ol>
+
+            </div>
+        </div>
+
+    </>
+    )
+}
+
+export default TodoList; -->
+
+
+
+
+
+<!-- --------------------------------------------------------
+<!-- --------------------------------------------------------
+import React, { useState } from "react";
+import DeleteIcon from '@material-ui/icons/Delete';
+
+
+const Listcopy = (props) => {
+
+
+    const [line, setline] = useState(false);
+
+    const cutIt = () => {
+        setline(true);
+    }
+    return (
+        <>
+            <div className="todo_style">
+                <span onClick={cutIt}><DeleteIcon className="deleteIcon" /></span>
+                <li style={{ textDecoration: line ? 'line-through' : "none"}}>{props.text}</li>
+            </div>
+        </>
+    )
+}
+export default Listcopy;
+
+
+
+
+
+
+
+<!-- -------------------------------------------------------> -->
+<!-- -------------------------------------------------------> -->
+<!-- /* * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* font-family: "josefin Sans","Ar"; */
+    /* background-color: powderblue; */
+
+/* } */
+
+
+/* .todo_style{
+    display: flex;
+    margin-left: ;
+} */
+
+.fa:hover{
+   color: red;
+   cursor: pointer;
+
+}
+
+
+.main_div{
+    width: 100%;
+    height: 100vh;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.center_div{
+    width: 25%;
+    height: 80%;
+    border: 2p solid black;
+    border-radius: 15px;
+    background-color: white;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+    flex-direction: column;
+
+}
+.btn{
+    display: flex;
+    padding: -1px;
+}
+.center_div ol {
+    margin-top: -6px;
+    margin-left: 5px;
+}
+.center_div li{
+    margin-left: -50px;
+    display: flex;
+    align-items: center;
+    color: #8566aa;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 20px;
+    min-height: 40px;
+   
+}
+ol{
+    display: flex;
+    flex-direction: column;
+    
+}
+h1{
+    text-align: center;
+    color: white;
+    background: purple;
+    border-radius: 9px;
+    text-shadow: 0 2px 2px 2px black;
+    
+
+}
+
+.shubh{
+    display: flex;
+}
+hr{
+    width: 258px;
+    /* height: 10px; */
+    align-items: center;
+}
+
+button{
+margin-left: 40px;
+    padding: 18px;
+    background: purple;
+    color: white;
+    border: 2px solid beige;
+    outline: none;
+    border-radius: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
+button:hover{
+    background-color: green;
+}
+
+.shubhb:hover{
+   color: purple;
+}
+input{
+    width: 70%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin:10px 0;
+    text-align: center;
+} 
+
+.todo_style{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    
+}
+.todo_style{
+    margin-left: 44px;
+}
+.deleteIcon{
+    background-color: purple;
+    margin-left: 70px;
+} --> -->

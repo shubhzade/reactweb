@@ -1,0 +1,353 @@
+<!-- import React, { useState } from "react";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Header from "./Header";
+import Footer from "./Footer";
+import CreatNote from "./CreatNote";
+import Note from "./Note";
+
+
+const App = () => {
+    const [addItem, setAddItem] = useState([]);
+
+    const onsub = (note) => {
+        // alert('i am click')
+        setAddItem((prevData) => {
+            return [...prevData, note]
+
+        })
+    }
+    const onDelet = (id) => {
+        setAddItem((olditem) => {
+            return olditem.filter((currdata, index) => {
+                return index != id;
+            })
+
+        })
+
+    }
+    return (
+        <>
+            <Header />
+            <CreatNote passNote={onsub} />
+            <Note />
+            {addItem.map((val, index) => {
+                return <Note key={index} id={index} title={val.title} content={val.content} deletItem={onDelet} />
+
+            })}
+            <Footer />
+
+        </>
+
+    )
+}
+export default App; -->
+
+
+<!-- -------------------------------------------Creat-Note-------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------
+import React, { useState } from "react";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import AddIcon from '@material-ui/icons/Add';
+
+const CreatNote = (props) => {
+
+    const [expand, setExpand] = useState(false);
+
+    const [note, setNote] = useState({
+        title: "",
+        content: "",
+    })
+    const inevent = (event) => {
+
+        const { name, value } = event.target;
+
+        setNote((prevData) => {
+
+            return {
+                ...prevData,
+                [name]: value
+            }
+
+
+        })
+
+    }
+    const onsub = () => {
+        props.passNote(note);
+        setNote({
+            title: "",
+            content: "",
+        })
+    }
+
+    const expandIt = () => {
+        setExpand(true);
+    };
+    const btNormal = () => {
+        setExpand(true);
+    }
+
+
+
+    return (
+        <>
+            <div className="center_div">
+                <form>
+                    {expand ?
+                        <input type="text" placeholder="Title" autoComplete="off" value={note.title} name="title" onChange={inevent} />
+                        : null}
+
+                    <textarea placeholder="write a note" id="" cols="40" rows="5" value={note.content} name="content" onChange={inevent}
+                        onClick={expandIt} onDoubleClick={btNormal}></textarea>
+
+                    {expand ?
+                        <button onClick={onsub} className="center" type="button" class="btn btn-primary" ><AddIcon /></button>
+                        : null}
+                </form>
+                <br />
+            </div>
+
+
+        </>
+
+    )
+}
+export default CreatNote;
+
+
+
+-----------------------------------------------Note.jsx------------------------------------------->
+<!-- ------------------------------------------------------------------------------------
+    import React from "react";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+
+
+
+const Note = (props) => {
+
+    // ----------------------------------------
+    
+    const deletNote=()=>{
+        props.deletItem(props.id)
+    }
+    return (
+        <>
+            <br />
+            <div className="note">
+
+                <h2>{props.title}</h2>
+                <p>{props.content}</p>
+                {/* <button type="button" class="btn btn-danger"><DeleteOutlineIcon/></button> */}
+                <button className="btn" onClick={deletNote}><DeleteOutlineIcon /></button>
+
+            </div>
+
+        </>
+
+    )
+}
+export default Note;
+
+
+-----------------------------------------------------Header------------------------------------------> -->
+<!-- -----------------------------------------------------------------------------------
+    import React  from "react";
+import logo from "./image/logo.jpg"
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+const Header=()=>{
+    return(
+        <>
+        <h1 className='texc-capitalize text-center mt-1 text-white '><img src={logo} alt="" width="50"height="40"/> Welocome to my home</h1>
+
+       
+            
+  
+    
+        </>
+
+    )
+}
+export default Header;
+
+<!-- ----------------------------------------------------------------------------------------------> --> --> -->
+<!-- ----------------------------------------------------------------------------------
+    import React, { useState }  from "react";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+
+const Footer =()=>{
+
+    const year = new Date().getFullYear();
+
+    
+let cur= new Date().toLocaleTimeString();
+    const[year2,setyear]=useState(cur);
+
+    let start=()=>{
+        let cur= new Date().toLocaleTimeString();
+        setyear(cur)
+    }
+    setInterval(start,1000)
+
+   
+
+    return(
+        <>
+        <footer className="text-center">
+       <p>copyright &copy; {year} / {year2}</p>
+        </footer>
+        </>
+
+    )
+}
+export default Footer;----------
+
+
+
+---------------------------------------css-----------------------------------> --> --> -->
+<!-- ------------------------------------------------------------------------- -->
+<!-- * {
+    box-sizing: border-box;
+    padding: 0;
+    /* margin: auto; */
+}
+    /* font-family: "josefin Sans","Ar"; */
+    /* background-color: powderblue; */
+
+/* } */
+
+
+/* .todo_style{
+    display: flex;
+    margin-left: ;
+} */
+
+.fa:hover{
+   color: red;
+   cursor: pointer;
+}
+
+.note {
+
+    /* border: 1px solid black; */
+    width: 30%;
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+    border-radius: 15px;
+
+}
+/* p{
+    margin-top: 37%;
+    color: black;
+    text-align: center;
+} */
+
+
+.main_div{
+    width: 100%;
+    height: 100vh;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.center_div{
+
+    width: 25%;
+    height: 80%;
+    border: 2p solid black;
+    border-radius: 15px;
+    background-color: white;
+
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+   
+
+}
+.btn{
+    display: flex;
+    padding: -1px;
+}
+.center_div ol {
+    margin-top: -6px;
+    margin-left: 5px;
+}
+.center_div li{
+    margin-left: -50px;
+    display: flex;
+    align-items: center;
+    color: #8566aa;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 20px;
+    min-height: 40px;
+   
+}
+ol{
+    display: flex;
+    flex-direction: column;
+    
+}
+h1{
+    height: 55px;
+    text-align: center;
+    color: white;
+    background: purple;
+    border-radius: 9px;
+    text-shadow: 0 2px 2px 2px black;
+    
+
+}
+
+.shubh{
+    display: flex;
+}
+hr{
+    width: 258px;
+   
+    align-items: center;
+}
+
+button{
+margin-left: 40px;
+    padding: 10px;
+    background: purple;
+    color: white;
+    border: 2px solid beige;
+    outline: none;
+    border-radius: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
+button:hover{
+    background-color:red;
+}
+
+.shubhb:hover{
+   color: purple;
+}
+input{
+    width: 70%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin:10px 0;
+    text-align: center;
+} 
+
+.todo_style{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    
+}
+.todo_style{
+    margin-left: 44px;
+}
+.deleteIcon{
+    background-color: purple;
+    margin-left: 70px;
+}
+-> --> --> --> -->

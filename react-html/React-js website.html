@@ -1,0 +1,432 @@
+<!-- import React from 'react';
+import ReactDOM from 'react-dom';
+import {BrowserRouter} from "react-router-dom";
+
+import App from './App';
+
+import "./index.css"
+
+
+
+
+ReactDOM.render(
+    <BrowserRouter>
+    <App/>
+
+    </BrowserRouter>
+
+
+, document.getElementById("root")
+);
+
+---------------------------------------------------APP------------
+---------------------------------------------------------------
+import React from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle"
+
+import Home from "./Home";
+import About from "./About";
+import Service from "./Service";
+import Contact from "./Contact";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+
+
+
+
+
+const App = () => {
+    return (
+        <>
+        <Navbar/>
+        <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route  exact path="/about" component={About}/>
+            <Route exact path="/service" component={Service}/>
+            <Route exact path="/contact" component={Contact}/>
+            <Redirect to="/"/>
+
+        </Switch>
+        < Footer/>
+   
+        </>
+    )
+}
+export default App;
+
+
+
+
+-------------------------------------------------Navbar------------
+--------------------------------------------------------------
+import React from "react";
+import { NavLink } from "react-router-dom";
+import zade from "../src/image/shubh.jpg"
+
+
+
+
+const Navbar = () => {
+    return (
+        <>
+            <div className="container_fluid nav bg">
+                <div className="row">
+                    <div className="col-10 mx-auto">
+
+
+
+
+                        <nav className="navbar navbar-expand-lg navbar-light bg-light" >
+                            <div className="container-fluid">
+                                <NavLink className="navbar-brand" to="#"><img src={zade} alt="no" width="70px"height="50px"/></NavLink>
+                                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span className="navbar-toggler-icon"></span>
+                                </button>
+                                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
+                                        <li className="nav-item">
+                                            <NavLink activeClassName="mainu_active" exact 
+                                            className="nav-link active" aria-current="page" to="/">Home</NavLink>
+                                        </li>
+                                        <li className="nav-item">
+                                            <NavLink activeClassName="mainu_active" 
+                                            className="nav-link" to="/service">Service</NavLink>
+                                        </li>
+                                        <li className="nav-item">
+                                            <NavLink activeClassName="mainu_active" 
+                                            className="nav-link" to="/about">About</NavLink>
+                                        </li>
+                                        <li className="nav-item">
+                                            <NavLink activeClassName="mainu_active"
+                                             className="nav-link" to="/contact">Contact</NavLink>
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div className="logo">
+                Shubh-Z
+            </div>
+
+        </>
+    )
+}
+export default Navbar;
+
+
+
+
+-----------------------------------------------------Common--------
+--------------------------------------------------------------
+import React from "react";
+import { NavLink } from "react-router-dom";
+import image from "../src/image/logo.jpg"
+
+const Common = (props) => {
+
+    return (
+        <>
+            <section id="header" className="d-flex align-items-center">
+                <div className="container-fluid ">
+                    <div className="row">
+                        <div className="col-10 max-auto">
+
+                            <div className="row">
+                                <div className="col-md-6 mt-5 pt-5 pt-lg-0 order-2 order-lg-1 d-flex justify-content-center flex-column" >
+                                    <h2>{props.name} <strong className="navbar-brand"> shubh technical</strong></h2>
+                                    <p className="my-3">we are the team of taleted devloper  making website</p>
+
+
+                                    <div className="mt-3">
+                                        <NavLink to={props.visit} className="btn-get-started"><button type="button" class="btn btn-outline-success">{props.btname}</button></NavLink>
+
+                                    </div>
+                                </div>
+
+                                <div id="imag" className="col-lg-6 mt-lg-5 mt-10 order-1 order-lg-2 header-img " alt="no load">
+                                    <img src={props.imgsrc} className="img-fluid" />
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+        </>
+    )
+}
+export default Common;
+
+
+
+
+
+-----------------------------------------------------HOME-----------
+--------------------------------------------------------------
+
+import React from "react";
+import { NavLink } from "react-router-dom";
+import image from "../src/image/logo.jpg"
+import Common from "./Common"
+
+const Home = () => {
+
+    return (
+        <>
+        <Common name='Grow youre bsz with'imgsrc={image} visit='/service' btname="get started"/>
+        
+        </>
+    )
+}
+export default Home;
+
+
+
+
+-------------------------------------------------------About-------
+--------------------------------------------------------------
+import React from "react";
+import { NavLink } from "react-router-dom";
+import image from "../src/image/logo.jpg"
+import Common from "./Common"
+
+const About = () => {
+    return (
+        <>
+        <Common  name='Welcome  to'imgsrc={image} visit='/contact' btname="Contact Now"/>
+        
+        
+        
+        </>
+        )
+    }
+    export default About;
+    
+    
+    
+    
+    -----------------------------------------------------------Card---
+    --------------------------------------------------------------
+    
+    import React from "react";
+    import { NavLink } from "react-router-dom";
+    import image from "../src/image/logo.jpg"
+    
+    
+    const Card = (props) => {
+        return (
+            <>
+                
+                                <div className="col-md-4 col-10 mx-auto" >
+                                    <div className="card" >
+                                        <img src={props.imgsrc} class="card-img-top" alt="..." />
+                                        <div className="card-body">
+                                            <h5 className="card-title">{props.title}</h5>
+                                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <NavLink to="" className="btn btn-primary">Go somewhere</NavLink>
+                                        </div>
+                                    </div>
+                                </div>          
+            </>
+        )
+    }
+    export default Card;
+
+
+
+----------------------------------------------------------Sdata----
+--------------------------------------------------------------
+import React from "react";
+import logo from "../src/image/logo.jpg"
+import marsh from "../src/image/marsh.jpg"
+import one from "../src/image/one.jpg"
+import shubh from "../src/image/shubh.jpg"
+import tomato from "../src/image/tomato.jpg"
+
+const Sdata =[
+    {
+        imgsrc: logo,
+        title: "logo devlopment"
+    },
+    {
+        imgsrc: marsh,
+        title: "logo devlopment"
+    },
+    {
+        imgsrc: one,
+        title: "logo devlopment"
+    },
+    {
+        imgsrc: shubh,
+        title: "logo devlopment"
+    },
+    {
+        imgsrc: tomato,
+        title: "logo devlopment"
+    },
+]
+
+export default Sdata;
+
+
+
+----------------------------------------------------Service--------
+------------------------------------------------------------
+import React from "react";
+import image from "../src/image/logo.jpg"
+import Card from "./Card"
+import Sdata from "./Sdata"
+
+
+const Service = () => {
+    return (
+        <>
+            <div className="my-3">
+                <h1 className="text-center">Our services</h1>
+            </div>
+
+
+            <div id="serviceimg"className=" container-fluid mb-5 ">
+                <div className="row">
+                    <div className="col-10 max-auto">
+
+                        <div className="row gy-4">
+                       
+                       {
+                           Sdata.map((val,index)=>{
+                               return <Card 
+                                               key={index}
+                                               imgsrc={val.imgsrc}
+                                                title={val.title}
+                                     />
+                           })
+                       }
+
+                        
+
+
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </>
+    )
+}
+export default Service;
+
+
+--------------------------------------------------Contact----------
+------------------------------------------------------------
+import React, { useState } from "react";
+
+const Contact = () => {
+    const [data, setData] = useState(
+        {
+            fname: "",
+            phone: "",
+            email: "",
+            text: "",
+        }
+    )
+
+    const formSubmit = (e) => {
+       e.preventDefault();
+       alert(`submitted ${data.fname}`)
+    }
+    const inevent = (event) => {
+        const { value, name } = event.target;
+        setData((preval) => {
+            return {
+                ...preval,
+                [name]: value
+            }
+
+        })
+
+    }
+
+    return (
+        <>
+            <div className="my-3">
+                <h1 className="text-center">Contact us</h1>
+            </div>
+            <div className="container contact_div">
+                <div className="row">
+                    <div className="col-md-6 col-10 mx-auto">
+                        <form onSubmit={formSubmit}>
+                            <div id="inp">
+
+
+                                <div class="mb-3">
+
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                        name="fname" value={data.fname} onChange={inevent}
+                                        placeholder="Enter full name" />
+                                </div>
+                                <div class="mb-3">
+                                    <input type="phone" class="form-control" id="exampleFormControlInput1"
+                                        name="phone" value={data.phone} onChange={inevent}
+                                        placeholder="mobile no." />
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        name="email" value={data.email} onChange={inevent}
+                                        placeholder="Email" />
+                                </div>
+
+                                <div className="text">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                        name="text" value={data.text} onChange={inevent}
+                                        placeholder="write youre comment" rows="3"></textarea>
+                                </div>
+                                {/* <button type="button" class="btn btn-outline-primary">Submit</button> */}
+                            </div>
+                                <button  className="text-center" type="submit" >Click me 🥰</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </>
+    )
+}
+export default Contact;
+
+
+-------------------------------------------------------------------------Footer----
+-----------------------------------------------------------------------------
+import React from "react";
+
+const Footer=()=>{
+    return(
+        <footer id="footer" className="text-center mt-lg-5">
+            <p> &copy; 2020 ShubhZ Technical | Term and condition apply</p>
+        </footer>
+
+    )
+
+}
+export default Footer; -->

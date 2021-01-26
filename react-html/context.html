@@ -1,0 +1,97 @@
+<!-- import React, { createContext } from "react";
+import CompA from "./CompA"
+
+
+const FirstName= createContext();
+const LastName= createContext();
+
+
+
+const App=()=>{
+    return(
+        <>
+       <FirstName.Provider value={"shubh"}>
+       <LastName.Provider value={"shubh"}>
+       <CompA/> 
+            </LastName.Provider>
+             </FirstName.Provider>
+      </>
+ );
+
+};
+export default App;
+export {FirstName,LastName};
+
+
+
+-------------------------------------CompA------------------------------------------------
+-------------------------------------------------------------------------------------
+import React from "react";
+import CompB from "./CompB";
+
+
+
+
+
+const CompA=()=>{
+    return <CompB/>;
+
+};
+export default CompA;
+-----------------------           -CompB-----------------------------------------------
+---------------------------------------------------------------------------
+
+import React from "react";
+import CompC from "./CompC";
+
+
+
+
+const CompB=()=>{
+    return <CompC/>;
+
+};
+export default CompB;
+
+
+
+
+
+
+-------------------------------------------CompC----------------------------------------------
+---------------------------------------------------------------------
+import React from "react";
+import {FirstName,LastName} from "./App";
+
+
+
+const CompC = () => {
+    return (
+        <>
+            <FirstName.Consumer> {(fname) => {
+                return (
+                    <LastName.Consumer>{(lname) => {return(
+
+                        <h1> My names is shubh {fname} {lname}</h1>
+                    );
+
+
+                    }}</LastName.Consumer>
+                )
+
+            }} </FirstName.Consumer>
+
+        </>
+    );
+};
+export default CompC;
+
+------
+--
+
+
+
+
+
+
+ -->

@@ -1,0 +1,100 @@
+<!-- import React from "react";
+import Home from './Home';
+import Contact from './Contact';
+import About from './About';
+import {Switch,Route,Redirect} from "react-router-dom";
+import Navbar from './Navbar';
+import Error from './Error';
+
+
+const App = () => {
+    return (
+        <>
+        <Navbar/>
+        <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route path="/about" component={About}/>
+            <Route path="/contact" component={Contact}/>
+            {/* <Route component={Error}/> */}
+            <Redirect to="/"/>
+
+     
+        </Switch>
+        </>
+    )
+}
+export default App;
+-------------------------------------------------------ERROR [page]---------------------
+
+
+import React from "react";
+import {NavLink} from "react-router-dom";
+
+
+const Error=()=>{
+
+    return(
+        <>
+        <h1>OOPS! pge not found</h1>
+        <p>thi spage is not valide </p>
+
+      <NavLink to="/"><button>homeee</button></NavLink>
+        </>
+    )
+}
+export default Error;
+
+
+
+
+
+-------------------------------------------------------------------vaLink---------
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+
+const Navbar = () => {
+    return (
+        <>
+            <div className="nav-style">
+
+                <NavLink className="active-class1" to="/">HOME</NavLink>
+                <NavLink className="active-class2" to="/about">ABOUT</NavLink>
+                <NavLink className="active-class3" to="/contact">CONTACT</NavLink>
+
+
+            </div>
+
+
+        </>
+    )
+}
+export default Navbar;
+
+------------------------------------------------------------------HOME-----------------
+-----------------------------------------------------------------------------------
+import React from "react";
+import { useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
+const Home = () => {
+    const location = useLocation();
+    const history = useHistory();
+    return (
+        <>
+            <div className="style">
+
+                <h1>haiii home</h1>
+                <p>welcome to my world {location.pathname}</p>
+            </div>
+            {location.pathname === `/` ? <button onClick={() => history.push("/contact")}>pushh</button> : null}\
+
+            {location.pathname === `/` ? <button onClick={() => history.goBack()}>goback</button> : null}
+
+            {location.pathname === `/` ? <button onClick={() => alert(`u r baddd`)}>alert</button> : null}
+
+            {/* <button onClick={() => history.goback()}>goback</button> */}
+        </>
+    )
+}
+export default Home; -->

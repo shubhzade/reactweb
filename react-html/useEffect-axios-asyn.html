@@ -1,0 +1,144 @@
+<!-- 
+
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+
+
+const CompA = () => {
+    const [num, setNum] = useState();
+    const [name, setName]=useState();
+    const [move,setMoves] =useState();
+
+
+
+
+    useEffect(() => {
+        async function getData(){
+            const res =await axios.get(`https://pokeapi.co/api/v2/pokemon/${num}`)
+            // console.log(res.data.name)
+            setName(res.data.name)
+            setMoves(res.data.moves.length)
+        }
+
+        getData();
+
+    //     document.title = `value= ${num}`
+    // }, [num]
+ } )
+
+    return (
+        <>
+        <h1>You Choos value.  <span style={{color:"red"}}>     {num} </span></h1>
+        <h1>my name is       <span style={{color:"red"}}>       {name}</span></h1>
+        <h1>my moves is      <span style={{color:"red"}}>       {move}</span></h1>
+
+            <select value={num} onChange={(event) => {
+                setNum(event.target.value)
+            }}>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="5">5</option>
+                <option value="25">25</option>
+                <option value="11">11</option>
+            </select>
+
+        </>
+    )
+
+};
+export default CompA;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------POKEMON API COLL--------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+
+Data from last year's Sword and Shield games (generation 8) is currently being added to PokéAPI. While waiting for an upstream project (Veekun) for verified data we decided to allow our community to bring in new data from various different sources. If you want to participate to this update project read more on GitHub.
+
+
+Sword and Shield data might be inaccurate and lacking in various aspects due to the fact that it is not taken directly from Nintendo's Pokemon ROMs. If you spot any mistake, please report it here
+
+
+PokéAPI
+The RESTful Pokémon API
+Serving over 60,000,000 API calls each month!
+
+All the Pokémon data you'll ever need in one place,
+easily accessible through a modern RESTful API.
+
+Check out the docs!
+
+Try it now!
+https://pokeapi.co/api/v2/
+pokemon/1
+Submit
+Need a hint? Try pokemon/ditto, pokemon/1, type/3, ability/4, or pokemon?limit=100&offset=200.
+
+Direct link to results: https://pokeapi.co/api/v2/pokemon/1
+
+Resource for bulbasaur
+name:"overgrow"
+url:"https://pokeapi.co/api/v2/ability/65/"
+is_hidden:false
+slot:1
+name:"chlorophyll"
+url:"https://pokeapi.co/api/v2/ability/34/"
+is_hidden:true
+slot:3
+base_experience:64
+name:"bulbasaur"
+url:"https://pokeapi.co/api/v2/pokemon-form/1/"
+height:7
+held_items:
+id:1
+is_default:true
+location_area_encounters:"https://pokeapi.co/api/v2/pokemon/1/encounters"
+name:"bulbasaur"
+order:1
+name:"bulbasaur"
+url:"https://pokeapi.co/api/v2/pokemon-species/1/"
+slot:1
+name:"grass"
+url:"https://pokeapi.co/api/v2/type/12/"
+slot:2
+name:"poison"
+url:"https://pokeapi.co/api/v2/type/4/"
+weight:69
+ View raw JSON (320.743 kB, 10470 lines)
+What is this?
+This is a full RESTful API linked to an extensive database detailing everything about the Pokémon main game series.
+
+We've covered everything from Pokémon to Berry Flavors.
+
+Where do I start?
+We have awesome documentation on how to use this API. It takes minutes to get started.
+
+This API will always be publicly available and will never require any extensive setup process to consume.
+
+Created by Paul Hallett and other PokéAPI contributors around the world. Pokémon and Pokémon character names are trademarks of Nintendo.
+
+Status Page -->

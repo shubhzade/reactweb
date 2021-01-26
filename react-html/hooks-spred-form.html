@@ -1,0 +1,131 @@
+<!-- import React, { useState } from 'react';
+
+const App = () => {
+    const [fullName, setfullName] = useState({
+        fName: "",
+        lName: "",
+        nName: "",
+        eName: "",
+        zade: ""
+    })
+
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+        alert('form submitted')
+    }
+
+
+
+    const innputevent = (event) => {
+
+        // set(event.target.value);
+        console.log(event.target.value)
+        console.log(event.target.name)
+
+        // const value = event.target.value;
+        // const name = event.target.name;
+
+        const{value,name}=event.target;
+
+        setfullName((prevalue)=> {
+             console.log(prevalue)
+
+             return{
+                 ...prevalue,
+               [name]: value
+
+             }
+
+            }))
+        }
+        
+        
+        return (<>
+        <div className="big">
+            <form onSubmit={onSubmit}>
+                <div>
+
+                    <h1>Hello {fullName.fName} {fullName.lName} </h1>
+                     <p>{fullName.nName} </p>
+                     <p>{fullName.eName} {fullName.zade}</p>
+                    
+
+
+                    <input type="text" placeholder="Enter your Name" name='fName'
+                        onChange={innputevent} value={fullName.fName} />
+
+
+                    <input type="password" placeholder="Enter your password" name='lName'
+                        onChange={innputevent} value={fullName.lName} />
+
+                    <input type="mobile" placeholder="Enter your number" name='nName'
+                        onChange={innputevent} value={fullName.nName} />
+
+                    <input type="email" placeholder="Enter your email" name='eName'
+                        onChange={innputevent} value={fullName.eName}   />
+                    <input type="text" placeholder="Enter your email" name='zade'
+                        onChange={innputevent} value={fullName.zade}   />
+
+                    <button type="submit" >Click me 🥰</button>
+
+                </div>
+            </form>
+        </div>
+    </>
+
+)
+}
+
+
+
+    // if (name === 'fName') {
+    //     return {
+    //         fName: value,
+    //         lName: prevalue.lName,
+    //         email:prevalue.eName,
+    //         mobile:prevalue.nName
+    //     }
+
+    // } else if (name === 'lName') {
+    //     return {
+    //         fName: prevalue.fName,
+    //         lName: value,
+    //         email:prevalue.eName,
+    //         mobile:prevalue.nName
+    //     }
+
+
+    // }
+    //  else if (name === 'nName') {
+    //     return {
+    //         fName: prevalue.fName,
+    //         lName:prevalue.eName,
+    //         email:prevalue.eName,
+    //        mobile: value
+    //     }
+
+
+    // }
+    //  else if (name === 'eName') {
+    //     return {
+    //         fName: prevalue.fName,
+    //         lName:prevalue.nName,
+    //         email: value,
+    //         number:prevalue.nName,
+     
+    //     }
+
+
+    // }
+
+export default App;
+
+
+// -----------// Control component 
+
+// An input form element whos value control by react 
+
+
+// ----------------UnControl component  
+ -->

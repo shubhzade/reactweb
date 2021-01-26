@@ -1,0 +1,156 @@
+<!-- import React from 'react';
+import ReactDOM from 'react-dom';
+import Amazon from './Amazon';
+import Neflix from './Netflix';
+
+
+
+const favSeries ='Amazon';
+
+// const FavS = () => {
+
+//     if(favSeries ==='Natflix'){ 
+//     return<Neflix/>
+//     }else{return<Amazon/>
+    
+//     }
+// };
+
+
+
+
+
+ReactDOM.render(
+    <>
+    <h1 className="heading">List of top 5 seres in netflix</h1>,
+    {/* <FavS/> */}
+
+    {(favSeries==="Natflix")?  <Neflix/> : <Amazon/> }
+</>
+    , document.getElementById("root")
+); 
+
+
+--------------------------------------------------------------------Amazon and Netflix (import for if-else)
+import React from 'react';
+import Sdata from './Sdata'
+import App from './App'
+
+
+const Amazon =()=>{
+
+    return (
+        <App
+             key={Sdata[0].id}
+            
+            sname={Sdata[0].sname}
+            link={Sdata[0].link}
+    
+        />
+    
+    );
+}
+
+export default Amazon;
+-------------------------------------------------------------------netflix
+import React from 'react';
+import Sdata from './Sdata'
+import App from './App'
+
+
+const Neflix =()=>{
+
+    return (
+        <App
+             key={Sdata[1].id}
+            
+            sname={Sdata[1].sname}
+            link={Sdata[1].link}
+    
+        />
+    
+    );
+}
+
+export default Neflix;
+
+
+
+
+-----------------------------------------------------------------------Sdata.jsx
+
+
+const Sdata = [
+    {
+        id: 1,
+        sname: "DARK"
+        , link: "https://www.netflix.com/in/title/801001720"
+    },
+
+    {
+        id: 2,
+        sname: "kjhjhDARK"
+        , link: "https://www.netflix.com/in/title/801009172"
+    },
+
+    {
+        id: 3,
+        sname: "khkjhjDARK"
+        , link: "https://www.netflix.com/in/title/801090172"
+    },
+
+    {
+        id: 4,
+        sname: "bnmbmnDARK"
+        , link: "https://www.netflix.com/in/title/801900172"
+    },
+
+
+
+
+
+]
+
+
+export default Sdata;
+
+--------------------------------------------------------------------App butt write (card.jsx)
+import React from 'react';
+import "./index.css"
+
+
+function App(props) {
+   
+
+    return ([   
+                         
+        <div className="cards">
+            <div className="card">
+                <img src={props.imgsrc} width="300px"height="300px"/>
+                <div className="card_info">
+                    <span className="card_categgory">{props.title}</span>
+                    <h3 className="card_title"> {props.sname} </h3>
+                    <a href={props.link}target="_black">
+                        <button>Watch Now</button>
+                    </a>
+                </div>
+            </div>,
+        </div>
+    ]
+
+    )
+}
+
+
+export default App;
+
+
+--------------------------------------------------------------image immpport
+import React from 'react';
+
+const image=(props) =>{
+    return <img src={props.imgsrc} width="300px"height="300px"/>
+};
+
+export default image;
+-->

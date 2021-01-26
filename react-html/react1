@@ -1,0 +1,57 @@
+// // var React = require('react');
+// // var ReactDOM = require('react-dom')
+// import React from 'react';
+// import ReactDOM from 'react-dom'
+
+             
+//           //  const arr =['djchd','hsfg','sss']    
+// //render method write in the form of array meathod
+
+// ReactDOM.render(
+//   // div [  hhhh,jh]
+// <>
+
+//     <h1>shubhj</h1>
+//      <p>plz watch this</p>
+//       <h2>new arrayhuhhhihih</h2>
+ 
+// </>
+  
+//   // </div>
+
+//   , document.getElementById('root') );
+
+
+                            // ---------browser read like this (bubble=useto cconvert laugauge)
+//  ReactDOM.render(React.createElement("h1"),null,
+//  "shbh"),
+//  document.getElementById("root");
+
+                           // ----------------pure js 
+// var  h1 =document.createElement('h1');
+// h1.innerHTML="shubh technical";
+// document.getElementById("root").appendChild(h1);
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(
+  [
+    <h1>Shubh technical Netfix Pick</h1>,
+    <p>List of 5 Best Series</p>,
+    <ol>
+      <li>Dark</li>
+      <li>Extra curricular</li>
+      <li>My Holo Lone</li>
+      <li> My first-2-Love</li>
+      <li>Mr.Robot</li>
+      
+    </ol>
+  ]
+
+
+  ,document.getElementById('root')
+);
+

@@ -1,0 +1,133 @@
+<!-- import React from "react";
+import { Route, Switch } from "react-router-dom";
+import About from "./About";
+import Contact from "./Contact";
+import Error from "./Error";
+import Nav from "./Nav";
+import Service from "./Service";
+import User from "./User";
+import Search from "./Search";
+import Sresult from "./Sresult";
+
+
+
+
+
+const App = () => {
+
+    const Name = () => {
+        return <h1>nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn</h1>
+    }
+    return (
+        <>
+            <Nav />
+            <Switch>
+                <Route exact path='/' component={ ()=> <About name='Abouhjt'/>  }/>
+                <Route exact path='/service' render={ ()=> <Service name='servighce'/>  } />
+                <Route exact path='/contact' component={Contact} />
+                <Route path='/user/:fname/:lname' component={User} />
+                <Route exact path='/search' component={Search} />
+                <Route exact path='/sresult' component={Sresult} />
+                <Route component={Error} />
+            </Switch>
+
+
+            {/* <About/>
+        <Contact/> */}
+
+        </>
+    )
+
+}
+export default App
+
+------------------------------------------SEARCH--------------------------------
+--------------------------------------------------------------------------
+import React, { useState } from "react";
+import Sresult from "./Sresult";
+
+
+const Search = () => {
+
+    const [img, setImg] = useState("");
+
+    const inevent = (event) => {
+        setImg(event.target.value);
+
+    }
+
+
+    return (
+        <>
+            <div className="search">
+
+                <input type="text" placeholder="write" onChange={inevent} value={img} />
+
+                {img === "" ? null : <Sresult name={img} />}
+            </div>
+
+
+        </>
+    )
+}
+export default Search;
+
+
+------------------------------------------------Sresult-----------------------
+--------------------------------------------------------------------------
+
+import React from "react";
+
+const Sresult=(props)=>{
+    const img =`https://source.unsplash.com/user/erondu/400x300/?${props.name}`;
+    return(
+        <>
+       <div className="img">
+           <img src={img} alt="net slow"/>
+           
+       </div>
+        </>
+    )
+}
+export default Sresult;
+--------------------------------------------------------------NAV------------
+--------------------------------------------------------------------------
+import React from "react";
+import {NavLink} from "react-router-dom"
+// import "./index.css"
+
+const Nav=()=>{
+    return(
+        <>
+        <div className="nav-style">
+
+        <NavLink exact activeClassName="active-class" to="/">About us</NavLink>
+
+        <NavLink exact activeClassName="active-class" to="/service">-------------services</NavLink>
+        
+        <NavLink exact activeClassName="active-class" to="/search">---------search.....</NavLink>
+
+        <NavLink activeClassName="active-class" to="/contact">----------Contact us</NavLink>
+
+        <NavLink exact activeClassName="active-class" to="/user/shubh/zade">---------user.....</NavLink>
+
+        <NavLink exact activeClassName="active-class" to="/sresult">--------RESULT.....</NavLink>
+        
+
+        </div>
+       
+
+{/* 
+       <a href="/">About us</a>
+       <a href="/contact">contact us</a> */}
+        </>
+    )
+}
+export default Nav;
+
+
+
+
+
+
+ --> -->

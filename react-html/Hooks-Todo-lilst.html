@@ -1,0 +1,191 @@
+<!-- import React, { useState } from "react"
+import TodoList from './TodoList';
+
+
+
+const App = () => {
+
+    const [inputList, setinputList] = useState("");
+    const [items, setitem] = useState([]);
+
+
+    const itemEvent = (event) => {
+        setinputList(event.target.value);
+
+    }
+    const listofitem = () => {
+        setitem((olditem) => {
+            return [...olditem, inputList]
+        });
+        setinputList('')
+
+
+    };
+    const deletitem = (id) => {
+        console.log("delett")
+
+        setitem((olditem)=>{
+            return olditem.filter((arrElem,index)=>{
+                return index !==id;
+            })
+
+        })
+    }
+
+
+    return (
+        <>
+
+            <div className="main_div">
+                <div className="center_div">
+                    <br />
+                    <h1>ToDo List</h1>
+                    <br />
+                    <div className="shubh">
+                        <input type="text" placeholder="Add a item" onChange={itemEvent} value={inputList} />
+                        <button onClick={listofitem} > + </button>
+                    </div>
+                    <hr />
+                    <ol>
+                        {/* <li>{inputList}</li> */}
+                        {items.map((itemval, index) => {
+                            return <TodoList key={index} id={index} text={itemval} onselect={deletitem} />;
+                        })
+                        }
+                    </ol>
+
+                </div>
+            </div>
+
+        </>
+    )
+}
+export default App;
+
+
+
+-------------------------------------------------todolist--------------------------------------------------------------
+
+
+
+import React from 'react';
+
+const TodoList = (props) => {
+
+
+    return (
+        <>
+            <div className="todo_style">
+                <i className="fa fa-camera fa-stack-1x" onClick={() => {
+                    props.onselect(props.id)
+                }} />
+                <li>{props.text}</li>
+            </div>
+        </>
+
+    );
+};
+export default TodoList;
+
+
+
+--------------------------------------- CSS-----------------------------------
+--------------------------------------------------------------------------
+
+
+.todo_style{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    
+}
+
+.fa:hover{
+   color: red;
+   cursor: pointer;
+
+}
+
+
+.main_div{
+    width: 100%;
+    height: 100vh;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.center_div{
+    width: 25%;
+    height: 80%;
+    border: 2p solid black;
+    border-radius: 15px;
+    background-color: white;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+    flex-direction: column;
+
+}
+.center_div ol{
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.center_div li{
+    display: flex;
+    align-items: center;
+    color: #8566aa;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 20px;
+    min-height: 40px;
+   
+}
+
+h1{
+    text-align: center;
+    color: white;
+    background: purple;
+    border-radius: 9px;
+    text-shadow: 0 2px 2px 2px black;
+    
+
+}
+
+.shubh{
+    display: flex;
+}
+hr{
+    width: 258px;
+    /* height: 10px; */
+    align-items: center;
+}
+
+button{
+margin-left: 40px;
+    padding: 18px;
+    background: purple;
+    color: white;
+    border: 2px solid beige;
+    outline: none;
+    border-radius: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
+button:hover{
+    background-color: green;
+}
+input{
+    width: 70%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin:10px 0;
+    text-align: center;
+} 
+
+
+ -->

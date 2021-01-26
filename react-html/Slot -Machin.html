@@ -1,0 +1,127 @@
+<!-- -------------------------App.jsx
+import React from 'react';
+import './index.css';
+import SlotM from './SlotMach';
+
+
+
+
+const App = () => {
+
+    return (<>
+
+
+        <h1 className="heading_style">
+            🎰 Welcome to <span style={{ fontWeight: "bold" }}>Slot machine game</span> 🎰 </h1>
+
+        <div className="slot_machine">
+
+            <SlotM x='😄' y='😄' z='😄' />
+            <SlotM x='❤️' y='❤️' z='❤️' />
+            <SlotM x='🤦' y='🤦' z='🤦' />
+            <SlotM x='🍎' y="🍌" z='🍎' />
+        </div>
+    </>
+
+    );
+
+};
+
+
+export default App; 
+
+
+
+
+
+
+-----------------------------------------------------------------Slot machine
+import React from 'react';
+
+const SlotM = (props) => {
+
+    // let x = '😄';
+    // let y = '😄';
+    // let z = '🎅';
+
+    // let x = props.x;
+    // let y = props.y;
+    // let z = props.z;
+    let{x,y,z}=props;
+
+
+    // {((x == y == z)==="maching")?  <Maching/>: <Notmaching/>}
+    
+    if ((x == y) && (y == z)) {
+        return (
+            <>
+                <div className="slot_inner">
+                    {x} {y} {z}
+                    <h2>This is matching</h2>
+                    <hr />
+
+                </div>
+
+            </>
+        )
+    }
+    else {
+        return (
+            <>
+
+
+                <div className="slot_inner">
+                    {x} {y} {z}
+                    <h2>This is not matching</h2>
+                    <hr />
+
+                </div>
+
+            </>
+        )
+
+    }
+
+
+
+};
+
+
+export default SlotM;
+
+--------------------------------------------------------------css
+
+
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+.heading_style{
+    padding:30px 0;
+    text-align: center;
+    font-family: "Ralway",sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    background-color: blue;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+.slot_inner{
+    text-align: center;
+    font-family: "Ralway",sans-serif;
+}
+.slot_machine{
+    margin: auto;
+   
+    border: 2px solid black;
+    background-color: cadetblue;
+    width: 400px;
+}-->

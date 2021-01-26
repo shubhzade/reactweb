@@ -1,0 +1,51 @@
+<!-- App.jsx---------------------
+import React from 'react';
+import add , {sub,mul,div} from "./cal";
+
+function App(){
+
+    return([
+        <ul>
+        <li>{add(40,4)}</li>
+        <li>{sub(40,4)}</li>
+        <li>{mul(40,4)}</li>
+        <li>{div(10000,3)}</li>
+       
+    </ul>
+    ]
+    )
+};
+
+
+export default App; 
+
+
+--------------------------------------------------cal.jsx
+function add(a,b){
+    let sum =a+b;
+    return sum;
+    };
+
+
+    function sub(a,b){
+        let sub = a-b;
+        return sub;
+    };
+
+
+    function mul(a,b){
+        let mul =a*b;
+        return mul;
+    };
+    function div(a,b){
+        let div=a/b;
+        div=div.toFixed(2);
+        return div;
+    }
+
+    export default add;
+
+    export {sub,mul,div};
+    
+    
+-->

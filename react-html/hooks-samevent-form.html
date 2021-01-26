@@ -1,0 +1,79 @@
+<!-- import React, { useState } from 'react';
+
+const App = () => {
+    const [fullName, setfullName] = useState({
+        fName: "",
+        lName: "",
+    })
+
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+        alert('form submitted')
+    }
+
+
+
+    const innputevent = (event) => {
+
+        // set(event.target.value);
+        console.log(event.target.value)
+        console.log(event.target.name)
+
+        const value = event.target.value;
+        const name = event.target.name;
+
+        setfullName((prevalue => {
+            //    console.log(prevalue)
+            if (name === 'fName') {
+                return{
+                    fName: value,
+                   lName: prevalue.lName,
+                }
+                     
+        }else if(name === 'lName') {
+            return{
+                lName: value,
+                fName:prevalue.fName,
+            }
+            
+                 
+    }
+        }))
+    }
+
+
+    return (<>
+        <div className="big">
+            <form onSubmit={onSubmit}>
+                <div>
+
+                    <h1>Hello {fullName.fName} {fullName.lName}</h1>
+                    <input type="text" placeholder="Enter your Name" name='fName'
+                        onChange={innputevent} value={fullName.fName} />
+
+                    <input type="password" placeholder="Enter your password" name='lName'
+                        onChange={innputevent} value={fullName.lName} />
+
+                    <button type="submit" >Click me 🥰</button>
+
+                </div>
+            </form>
+        </div>
+    </>
+
+    )
+}
+
+
+
+export default App;
+
+
+// -----------// Control component 
+
+// An input form element whos value control by react 
+
+
+// ----------------UnControl component  
+ -->

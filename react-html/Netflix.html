@@ -1,0 +1,145 @@
+
+
+<!-- ----------------------------------------------------App.jsx -->
+<!-- import React from 'react';
+import ReactDOM from 'react-dom';
+
+import App from "./App";
+import Sdata from "./Sdata";
+
+
+
+
+ReactDOM.render(
+    <>
+    <h1 className="heading">List of top 5 seres in netflix</h1>,
+    {Sdata.map((val) => {
+        return (
+            <App
+            key={val.id}
+                title={val.title}
+                imgs={val.title}
+                sname={val.sname}
+                link={val.link}
+
+            />
+
+        );
+    })}
+
+</>
+    , document.getElementById("root")
+); -->
+
+
+
+<!-- ----------------------------------------------------------Sdata 
+const Sdata = [
+    {
+        id: 1,
+        sname: "DARK"
+        , link: "https://www.netflix.com/in/title/801001720"
+    },
+
+    {
+        id: 2,
+        sname: "kjhjhDARK"
+        , link: "https://www.netflix.com/in/title/801009172"
+    },
+
+    {
+        id: 3,
+        sname: "khkjhjDARK"
+        , link: "https://www.netflix.com/in/title/801090172"
+    },
+
+    {
+        id: 4,
+        sname: "bnmbmnDARK"
+        , link: "https://www.netflix.com/in/title/801900172"
+    },
+
+
+
+
+
+]
+
+
+export default Sdata; -->
+
+
+<!-- -------------------------------------card.jsx 
+import React from 'react';
+import "./index.css"
+
+
+function App(props) {
+   
+
+    return ([   
+                         
+        <div className="cards">
+            <div className="card">
+                <img src={props.imgsrc} width="300px"height="300px"/>
+                <div className="card_info">
+                    <span className="card_categgory">{props.title}</span>
+                    <h3 className="card_title"> {props.sname} </h3>
+                    <a href={props.link}target="_black">
+                        <button>Watch Now</button>
+                    </a>
+                </div>
+            </div>,
+        </div>
+    ]
+
+    )
+}
+
+
+export default App; -->
+
+
+<!-- ---------------------------------------------------image 
+import React from 'react';
+
+const image=(props) =>{
+    return <img src={props.imgsrc} width="300px"height="300px"/>
+};
+
+export default image;
+
+
+
+
+
+
+-----------------------------------------------css
+/* *{margin: 0;padding: 0;box-sizing: border-box;}
+
+
+
+
+.cards{
+  
+        border: none;
+        display: flex;
+        justify-content: center;
+        width: 500px;
+        box-sizing: border-box;
+        text-align: center;
+        margin-left: 400px;
+        background-color: pink;
+        border-radius: 55px;
+        transition:cubic-bezier(0.6, -0.28, 0.735, 0.045)
+    }
+    body{
+        background-color: aqua;
+    } */
+    .cards{
+         display: flex;
+
+         
+       
+    }
+-->
